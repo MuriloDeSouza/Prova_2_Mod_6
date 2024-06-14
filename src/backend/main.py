@@ -14,31 +14,19 @@ if not cap.isOpened():
 # Carregar o classificador de rostos pretreinado do OpenCV
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-#ler e exibir os frames
+# Ler e exibir frames do vídeo
 frame_number = 0
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
 
-# Exibir o frame
+    # Exibir o frame
     cv2.imshow('Frame', frame)
     
     # Salvar o frame (opcional)
     cv2.imwrite(f'frame_{frame_number}.jpg', frame)
     frame_number += 1
-
-    # Pressionar 'q' para sair do loop
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-
-
-# Ler e exibir frames do vídeo
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
 
     # Converter o frame para escala de cinza
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)

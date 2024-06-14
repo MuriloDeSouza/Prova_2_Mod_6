@@ -1,5 +1,23 @@
 # Prova_2_Mod_6
 
+# Como faz para rodar o projeto:
+Para poder rodar o proeto, podemos baixar primeiro as dependências todas com o comando:
+```bash
+pip install -r requirements.txt
+```
+E para poder rodar o programa temos que entrar na pasta src/backend e depois digitar o comando:
+
+```bash
+python main.py
+```
+
+# Para que serve o programa e programa rodando:
+Este projeto utiliza o OpenCV para detectar rostos em um vídeo e salvar o vídeo processado com as detecções em um arquivo MP4.
+
+![imagem dele funcionando](/static/foto_rodando.PNG)
+
+Ele consegue fazer as detecção dos rostos.
+
 # Respondendo as perguntas técnicas:
 
 2.1
